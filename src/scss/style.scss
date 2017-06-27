@@ -1,12 +1,12 @@
-// variables
-// contenedores
 $container-yellow: rgb(247, 182, 23);
 $container-gray: rgb(43, 43, 43);
-// Textos
 $font-color-white: white;
 $font-size-big: 35px;
 $helvetica: helvetica;
 $space-percent: .5%;
+$col-3: 30%;
+$col-6: 50%;
+$col-12: 100%;
 
 @mixin li ($percent) {
   background: $container-gray;
@@ -14,6 +14,16 @@ $space-percent: .5%;
   padding: $percent;
   margin-top: $percent;
   font-family: $helvetica;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 95%;
+  margin: 2%;
 }
 
 nav {
@@ -55,3 +65,13 @@ nav {
 footer {
   @extend .aside;
 }
+
+@media screen and (max-width: 320px) {
+  .responsive {
+    width: $col-12; } }
+@media screen and (min-width: 720px) {
+  .responsive {
+    width: $col-6; } }
+@media screen and (min-width: 1200px) {
+  .responsive {
+    width: $col-3; } }
