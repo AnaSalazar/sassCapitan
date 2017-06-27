@@ -1,20 +1,5 @@
-$container-yellow: rgb(247, 182, 23);
-$container-gray: rgb(43, 43, 43);
-$font-color-white: white;
-$font-size-big: 35px;
-$helvetica: helvetica;
-$space-percent: .5%;
-$col-3: 30%;
-$col-6: 50%;
-$col-12: 100%;
-
-@mixin li ($percent) {
-  background: $container-gray;
-  color: $font-color-white;
-  padding: $percent;
-  margin-top: $percent;
-  font-family: $helvetica;
-}
+@import "variables";
+@import "mixin";
 
 *{
   margin: 0;
@@ -24,6 +9,11 @@ $col-12: 100%;
 .container {
   width: 95%;
   margin: 2%;
+}
+
+.total-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 nav {
@@ -54,6 +44,19 @@ nav {
   }
 }
 
+table {
+  @include table;
+  td {
+    @include table;
+    &:hover {
+      background: $container-yellow;
+    }
+  }
+  th {
+    @include table;
+  }
+}
+
 .aside {
   background: $container-gray;
   color: $font-color-white;
@@ -65,13 +68,3 @@ nav {
 footer {
   @extend .aside;
 }
-
-@media screen and (max-width: 320px) {
-  .responsive {
-    width: $col-12; } }
-@media screen and (min-width: 720px) {
-  .responsive {
-    width: $col-6; } }
-@media screen and (min-width: 1200px) {
-  .responsive {
-    width: $col-3; } }

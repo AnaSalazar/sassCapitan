@@ -1,0 +1,13 @@
+@mixin li ($percent) {
+  background: $container-gray;
+  color: $font-color-white;
+  padding: $percent;
+  margin-top: $percent;
+  font-family: $helvetica;
+}
+
+@mixin table {
+  padding-right: 5%;
+  border: 2px solid $container-gray;
+  border-collapse: collapse;
+}
