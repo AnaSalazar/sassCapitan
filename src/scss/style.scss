@@ -1,0 +1,57 @@
+// variables
+// contenedores
+$container-yellow: rgb(247, 182, 23);
+$container-gray: rgb(43, 43, 43);
+// Textos
+$font-color-white: white;
+$font-size-big: 35px;
+$helvetica: helvetica;
+$space-percent: .5%;
+
+@mixin li ($percent) {
+  background: $container-gray;
+  color: $font-color-white;
+  padding: $percent;
+  margin-top: $percent;
+  font-family: $helvetica;
+}
+
+nav {
+  background-color: $container-yellow;
+  padding: $space-percent;
+  h1 {
+    font-size: $font-size-big;
+    color: $font-color-white;
+  }
+}
+
+.menu {
+  ul {
+    list-style: none;
+    li{
+      @include li (1%);
+      &:hover {
+        background: $container-yellow;
+      }
+    }
+  }
+}
+
+.main-container {
+  padding: $space-percent;
+  h1 {
+    font-size: $font-size-big;
+  }
+}
+
+.aside {
+  background: $container-gray;
+  color: $font-color-white;
+  text-align: center;
+  padding: $space-percent;
+  margin-top: $space-percent;
+}
+
+footer {
+  @extend .aside;
+}
