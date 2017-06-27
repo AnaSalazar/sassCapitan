@@ -11,17 +11,14 @@ var cargarAlumnas = function(){
 }
 
 var mostrarAlumnas = function(alumna){
+  var listaAlumnas = $("#listaAlumnas");
   var $nombre = alumna.name;
-  console.log($nombre);
   var $apellidoPaterno = alumna.pLastName;
-  console.log($apellidoPaterno);
   var $apellidoMaterno = alumna.mLastName;
-  console.log($apellidoMaterno);
 
   var $tr = $("<tr />");
   var $nombreTd = $("<td />");
-  $nombreTd.html($nombre);
-  console.log($nombreTd);
+  $nombreTd.text($nombre);
   var $apellidoPaternoTd = $("<td />");
   $apellidoPaternoTd.text($apellidoPaterno);
   var $apellidoMaternoTd = $("<td />");
