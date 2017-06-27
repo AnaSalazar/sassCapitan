@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 95%;
+  margin: 2%; }
+
 nav {
   background-color: #f7b617;
   padding: 0.5%; }
@@ -27,5 +35,15 @@ nav {
   text-align: center;
   padding: 0.5%;
   margin-top: 0.5%; }
+
+@media screen and (max-width: 320px) {
+  .responsive {
+    width: 100%; } }
+@media screen and (min-width: 720px) {
+  .responsive {
+    width: 50%; } }
+@media screen and (min-width: 1200px) {
+  .responsive {
+    width: 30%; } }
 
 /*# sourceMappingURL=style.css.map */
