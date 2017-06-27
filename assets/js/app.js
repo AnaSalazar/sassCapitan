@@ -23,10 +23,11 @@ var mostrarAlumnas = function(alumna){
   $apellidoPaternoTd.text($apellidoPaterno);
   var $apellidoMaternoTd = $("<td />");
   $apellidoMaternoTd.text($apellidoMaterno);
-
+  var checkbox = $("<input type='checkbox' />");
   $tr.append($nombreTd);
   $tr.append($apellidoPaternoTd);
   $tr.append($apellidoMaternoTd);
+  $tr.append(checkbox);
 
   listaAlumnas.append($tr);
 }
