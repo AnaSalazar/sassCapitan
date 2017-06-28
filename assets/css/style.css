@@ -1,21 +1,18 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0; }
+
+nav {
+  background-color: #f7b617;
+  padding: 1%; }
+  nav h1 {
+    font-size: 35px;
+    color: white; }
 
 .container {
   width: 95%;
   margin: 2%; }
-
-.total-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; }
-
-nav {
-  background-color: #f7b617;
-  padding: 0.5%; }
-  nav h1 {
-    font-size: 35px;
-    color: white; }
 
 .menu ul {
   list-style: none; }
@@ -29,30 +26,76 @@ nav {
       background: #f7b617; }
 
 .main-container {
-  padding: 0.5%; }
+  padding: 1%; }
   .main-container h1 {
     font-size: 35px; }
 
-table {
-  padding-right: 5%;
+table, table td, table th {
+  padding-right: 6%;
   border: 2px solid #2b2b2b;
   border-collapse: collapse; }
-  table td {
-    padding-right: 5%;
-    border: 2px solid #2b2b2b;
-    border-collapse: collapse; }
-    table td:hover {
-      background: #f7b617; }
-  table th {
-    padding-right: 5%;
-    border: 2px solid #2b2b2b;
-    border-collapse: collapse; }
+  table td:hover {
+    background: #f7b617; }
 
-.aside, footer {
+.aside {
   background: #2b2b2b;
   color: white;
   text-align: center;
-  padding: 0.5%;
-  margin-top: 0.5%; }
+  padding: 1%; }
+
+footer {
+  background: #2b2b2b;
+  color: white;
+  text-align: center;
+  padding: 1%;
+  clear: both;
+  margin-top: 1%;
+  width: 100%; }
+
+@media (max-width: 768px) {
+  .menu {
+    width: 99.996%;
+    padding-bottom: 12px;
+    float: left; }
+
+  .main-container {
+    width: 99.996%;
+    padding-bottom: 12px;
+    float: left; }
+
+  .aside {
+    width: 99.996%;
+    padding-bottom: 12px;
+    float: left; } }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu {
+    width: 33.332%;
+    padding-bottom: 12px;
+    float: left; }
+
+  .main-container {
+    width: 66.664%;
+    padding-bottom: 12px;
+    float: left; }
+
+  .aside {
+    width: 99.996%;
+    padding-bottom: 12px;
+    float: left; } }
+@media (min-width: 1024px) {
+  .menu {
+    width: 24.999%;
+    padding-bottom: 12px;
+    float: left; }
+
+  .main-container {
+    width: 49.998%;
+    padding-bottom: 12px;
+    float: left; }
+
+  .aside {
+    width: 24.999%;
+    padding-bottom: 12px;
+    float: left; } }
 
 /*# sourceMappingURL=style.css.map */

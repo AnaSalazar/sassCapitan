@@ -3,7 +3,7 @@ var funcionPrimera = function () {
 }
 
 var cargarAlumnas = function(){
-  $.getJSON("http://laboratoria.cuadra.co:9339/api/v1/students/", function (alumnas) {
+  $.getJSON("https://laboratoria.cuadra.co/api/v1/students/", function (alumnas) {
     alumnas.forEach(function(alumna){
       mostrarAlumnas(alumna)
     });
@@ -12,18 +12,19 @@ var cargarAlumnas = function(){
 
 var mostrarAlumnas = function(alumna){
   var listaAlumnas = $("#listaAlumnas");
-  var $nombre = alumna.name;
-  var $apellidoPaterno = alumna.pLastName;
-  var $apellidoMaterno = alumna.mLastName;
+  var nombre = alumna.name;
+  var apellidoPaterno = alumna.pLastName;
+  var apellidoMaterno = alumna.mLastName;
 
   var $tr = $("<tr />");
   var $nombreTd = $("<td />");
-  $nombreTd.text($nombre);
+  $nombreTd.text(nombre);
   var $apellidoPaternoTd = $("<td />");
-  $apellidoPaternoTd.text($apellidoPaterno);
+  $apellidoPaternoTd.text(apellidoPaterno);
   var $apellidoMaternoTd = $("<td />");
-  $apellidoMaternoTd.text($apellidoMaterno);
+  $apellidoMaternoTd.text(apellidoMaterno);
   var checkbox = $("<input type='checkbox' />");
+
   $tr.append($nombreTd);
   $tr.append($apellidoPaternoTd);
   $tr.append($apellidoMaternoTd);

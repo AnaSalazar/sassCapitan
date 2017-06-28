@@ -2,18 +2,9 @@
 @import "mixin";
 
 *{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-.container {
-  width: 95%;
-  margin: 2%;
-}
-
-.total-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
 }
 
 nav {
@@ -23,6 +14,11 @@ nav {
     font-size: $font-size-big;
     color: $font-color-white;
   }
+}
+
+.container {
+  width: 95%;
+  margin: 2%;
 }
 
 .menu {
@@ -47,24 +43,62 @@ nav {
 table {
   @include table;
   td {
-    @include table;
+    @extend table;
     &:hover {
       background: $container-yellow;
     }
   }
   th {
-    @include table;
+    @extend table;
   }
 }
 
 .aside {
-  background: $container-gray;
-  color: $font-color-white;
-  text-align: center;
-  padding: $space-percent;
-  margin-top: $space-percent;
+  @include asideFooter;
 }
 
 footer {
-  @extend .aside;
+  @include asideFooter;
+  clear: both;
+  margin-top: $space-percent;
+  width: 100%;
+}
+
+// mobile
+@media (max-width: 768px) {
+  .menu{
+    @include grid (12);
+  }
+  .main-container {
+    @include grid (12);
+  }
+  .aside {
+    @include grid (12);
+  }
+}
+
+// ipads
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu{
+    @include grid (4);
+  }
+  .main-container {
+    @include grid (8);
+  }
+  .aside {
+    @include grid (12);
+  }
+}
+
+// desktops
+@media (min-width: 1024px) {
+  .menu{
+    @include grid (3);
+  }
+  .main-container {
+    @include grid (6);
+  }
+  .aside {
+    @include grid (3);
+  }
 }
