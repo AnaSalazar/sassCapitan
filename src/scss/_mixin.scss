@@ -7,7 +7,19 @@
 }
 
 @mixin table {
-  padding-right: 5%;
+  padding-right: 6%;
   border: 2px solid $container-gray;
   border-collapse: collapse;
+}
+
+@mixin asideFooter {
+  background: $container-gray;
+  color: $font-color-white;
+  text-align: center;
+  padding: $space-percent;
+}
+@mixin grid ($columns) {
+	width: $column * ($columns);
+	padding-bottom: 12px;
+	float: left;
 }
